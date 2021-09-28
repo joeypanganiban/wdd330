@@ -15,6 +15,17 @@ body {
         padding-left: 0;
         width: 100vw;
         margin: 0;
+        h1  {
+            :hover {
+                color: rgb(240, 236, 11);
+                text-decoration: underline;
+                font-style: bold;
+            }
+            a {
+                text-decoration: none;
+                color: #FFF;
+            }
+        }
     }
     nav, main {
         background-color: antiquewhite;
