@@ -30,8 +30,9 @@ body {
     nav, main {
         background-color: antiquewhite;
         margin: auto;
+        margin-bottom: 10em;
         max-width: 780px;
-        height: 70vh;
+        height: 100%; 
         padding: 2rem;
         box-shadow: $text-shadow;
         ol {
