@@ -19,6 +19,7 @@ body nav, body main {
   max-width: 780px;
   height: 70vh;
   padding: 2rem;
+  box-shadow: #000 2px 2px 8px;
 }
 body nav ol, body main ol {
   margin: 0;
