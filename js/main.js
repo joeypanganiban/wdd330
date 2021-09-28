@@ -14,7 +14,7 @@ const links = [
   { label: "Week13", url: "week10/index.html" },
   ]
 
-const list = document.getElementById('list');
+const weekList = document.getElementById('list');
 
 for (let i=0; i<links.length; i++){
   // create an element <li> <a></a> </li> inside <ol></ol>
@@ -25,34 +25,8 @@ for (let i=0; i<links.length; i++){
   a.setAttribute('href', links[i].url); //set a link/url for Week[i]
 
   li.appendChild(a); // put the a inside the li
-  list.appendChild(li); // put the li inside the #list
+  weekList.appendChild(li); // put the li inside the #list
 };
-
-
-
-
-  // let weekList = document.getElementById("list");
-
-  // for (let i=0; i <= links.length; i++){
-  //     let a = document.createElement("a");
-  //     let li = document.createElement("li");
-  //     a.textContent = links[i].label;
-  //     a.setAttribute('href', links[i].url);
-  //     li.appendChild(a);
-  //     weekList.appendChild(li); 
-  // }
-  
-
-
-
-
-// let weeksList;
-// weeksList = links;
-
-// document.createElement('div');
-
-// for(let i=0; i<=weeksList.length; i++) {
-// };
 
 
 
