@@ -1,0 +1,44 @@
+$text-shadow: #000 2px 2px 8px;
+
+
+body {
+    margin: 0;
+    width: 100%;
+    background-image: linear-gradient(to right,  #14177D, #db246a);
+    font-family: Arial, Helvetica, sans-serif;
+  
+    header {
+        text-align: center;
+        color: #FFF;
+        text-shadow: $text-shadow;
+        padding: 2rem;
+        padding-left: 0;
+        width: 100vw;
+        margin: 0;
+    }
+    nav, main {
+        background-color: antiquewhite;
+        margin: auto;
+        max-width: 780px;
+        height: 70vh;
+        padding: 2rem;
+        ol {
+            margin: 0;
+            padding-left: 5rem;
+            li { 
+                padding-bottom: .5rem; 
+                list-style: none;
+                :hover {
+                    color: rgb(150, 7, 7);
+                    text-decoration: underline;
+                    font-style: bold;
+                }
+                a {
+                    text-decoration: none;
+                    color: rgb(10, 10, 10);                   
+                }
+            }
+        }
+    };
+  }
+  

@@ -1,3 +1,41 @@
-
+body {
+  margin: 0;
+  width: 100%;
+  background-image: linear-gradient(to right, #14177D, #db246a);
+  font-family: Arial, Helvetica, sans-serif;
+}
+body header {
+  text-align: center;
+  color: #FFF;
+  text-shadow: #000 2px 2px 8px;
+  padding: 2rem;
+  padding-left: 0;
+  width: 100vw;
+  margin: 0;
+}
+body nav, body main {
+  background-color: antiquewhite;
+  margin: auto;
+  max-width: 780px;
+  height: 70vh;
+  padding: 2rem;
+}
+body nav ol, body main ol {
+  margin: 0;
+  padding-left: 5rem;
+}
+body nav ol li, body main ol li {
+  padding-bottom: 0.5rem;
+  list-style: none;
+}
+body nav ol li :hover, body main ol li :hover {
+  color: #960707;
+  text-decoration: underline;
+  font-style: bold;
+}
+body nav ol li a, body main ol li a {
+  text-decoration: none;
+  color: #0a0a0a;
+}
 
 /*# sourceMappingURL=styles.css.map */
