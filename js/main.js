@@ -1,6 +1,6 @@
 const links = [
   { label: "Week1", url: "week1/index.html", notes: "Local Storage, Portfolio, UX Mobile Design" },
-  { label: "Week2", url: "week2/index.html", notes: " " },
+  { label: "Week2", url: "week2/index.html", notes: "Programming Basics, Array, Logic, Loops, Functions" },
   { label: "Week3", url: "week3/index.html", notes: " " },
   { label: "Week4", url: "week4/index.html", notes: " " },
   { label: "Week5", url: "week5/index.html", notes: " " },

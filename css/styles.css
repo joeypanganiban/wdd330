@@ -31,6 +31,9 @@ body nav, body main {
   padding: 2rem;
   box-shadow: #000 2px 2px 8px;
 }
+body nav ul, body nav div, body main ul, body main div {
+  font-size: 95%;
+}
 body nav ol, body main ol {
   margin: 0;
   padding-left: 5rem;

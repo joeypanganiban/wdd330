@@ -35,6 +35,9 @@ body {
         height: 100%; 
         padding: 2rem;
         box-shadow: $text-shadow;
+        ul, div {
+            font-size: 95%;
+        }
         ol {
             margin: 0;
             padding-left: 5rem;
