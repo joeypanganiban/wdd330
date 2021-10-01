@@ -35,6 +35,15 @@ body {
         height: 100%; 
         padding: 2rem;
         box-shadow: $text-shadow;
+        h3 {
+            background-color: rgb(212, 236, 103);
+            padding: 1rem;
+        }
+        h4 {
+            background-color: rgb(233, 248, 167);
+            padding: .5rem;
+            padding-left: 1rem;
+        }
         ul, div {
             font-size: 95%;
         }

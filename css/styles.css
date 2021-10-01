@@ -31,6 +31,15 @@ body nav, body main {
   padding: 2rem;
   box-shadow: #000 2px 2px 8px;
 }
+body nav h3, body main h3 {
+  background-color: #d4ec67;
+  padding: 1rem;
+}
+body nav h4, body main h4 {
+  background-color: #e9f8a7;
+  padding: 0.5rem;
+  padding-left: 1rem;
+}
 body nav ul, body nav div, body main ul, body main div {
   font-size: 95%;
 }

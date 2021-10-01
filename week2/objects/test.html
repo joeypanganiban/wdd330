@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>CONSOLE IS THE KEY!</div>
+    <script>
+        // Strings
+        const name = "Joey";
+        console.log(name.length);
+        console.log(typeof(name));
+        console.log(name.toUpperCase());
+        console.log(name.toLowerCase());
+        console.log(name.charAt(3));
+        console.log(name.indexOf('J'));
+        console.log(name.indexOf('z'));
+        console.log(name.lastIndexOf('e'));
+        console.log(name.includes('o'));
+        console.log(name.includes('u'));
+        console.log(name.startsWith('J'));
+        console.log(name.startsWith('j'));
+        console.log(name.endsWith('Y'));
+        console.log(name.endsWith('y'));
+        console.log('JavaScript'.concat('Ninja'));
+        console.log('Hello'.concat(' ','World','!'));
+        console.log('Java' + 'Script' + ' ' + 'Ninja');
+        console.log('    Hello World     '.trim());
+        console.log('   \t\t  JavaScript Ninja! \r'.trim());
+        console.log('Hello'.repeat(2));
+
+        // Template Literals 
+        console.log(`Hello!`);
+        console.log(`She said, "It's Me!"`);
+        const name1 = `Siri`;
+        console.log(`Hello ${ name1 }!`);
+        const age = 39;
+        console.log(`I will be ${ age + 1 } next year`);
+        console.log(`This is the start ...
+        .... and this is the end`);
+
+
+        // Symbols
+        const uniqueID = Symbol('this is a unique ID');
+        console.log(typeof(uniqueID));
+        console.log(String(uniqueID));
+        const A = Symbol.for('shared symbol');
+        const B = Symbol.for('shared symbol');  
+
+        // Numbers
+        console.log(typeof 42);
+        console.log(typeof 3.14159);
+        console.log(Number.isInteger(42));
+        console.log(Number.isInteger(3.142));
+        console.log(new Number(3));
+
+        // Octal and Hexadecimal Numbers
+        console.log(0xAF); // A represents 10, F represents 15
+        console.log(0o47); // 4 eights and 7 units
+        console.log(0b1010); // 1 eight, 0 fours, 1 two and 0 units
+
+        // Exponential Notation
+        console.log(1e6); // means 1 multiplied by 10 to the power 6 (a million)
+        console.log(2E3); // 2 multiplied by 10^3 (two thousand)
+        console.log(2.5e-3); // means 2.5 multiplied by 10 to the power -3 (0.001)
+
+        // Number Methods
+        console.log(5..toExponential()); //"5e+0"
+        console.log(5 .toExponential());
+        console.log(5.0.toExponential());
+        console.log((5).toExponential());
+        const PI = 3.1415926;
+        console.log(PI);
+        console.log(PI.toFixed(3)); // "3.142" only one dot is needed when using constants or variables
+        console.log(325678..toPrecision(2)); //"3.3e+5"
+        console.log(2.459.toPrecision(2)); // "2.5"
+
+        // Incrementing Values
+        let points = 5;
+        console.log(points++); // 5
+        console.log(points++); // will return 6, then increase points to  // 6
+        console.log(++points); // will increase points to 8, then return it // 8
+        console.log(points--); // returns 8, but has decreased points to 7 // 8
+        console.log(--points); // decreases points to 6, then returns that value // 6
+
+        // Booleans
+        console.log(Boolean('hello'));
+        console.log(Boolean(42));
+        console.log(Boolean(0));
+
+        // Logical Operators
+        console.log(!true); // negating true returns false
+        console.log(!0); // negating true returns false
+        console.log(!!'');
+        console.log(!!"hello");
+        console.log(!!"false");
+
+        // Arrays
+        const heroes = [];
+        console.log(heroes[0]);
+        console.log(heroes[0] = 'Superman');
+        console.log(heroes[0] = 'Batman');
+        console.log(heroes[1] = 'Wonder Woman');
+        console.log(heroes[2] = 'Flash');
+        console.log(heroes[5] = 'Aquaman');
+        console.log(heroes);
+
+        let avengers = ['Captain America', 'Iron Man', 'Thor', 'Hulk'];
+        const mixedArray = [ null, 1, [], 'two', true ];
+        console.log(delete avengers[2]);
+        console.log(avengers);
+        console.log(avengers[3]);
+        const [x,y] = [1,2];
+        console.log(x);
+        console.log(y);
+        console.log(avengers.length);
+        console.log(avengers.length - 1);
+        console.log(avengers);
+        console.log(avengers.pop());
+        console.log(avengers.shift());
+        console.log(avengers.push('Thor'));
+        console.log(avengers.unshift('Captain America'));
+        console.log(avengers.concat(['Hulk','Hawkeye', 'Black Widow']));
+
+        console.log(avengers);
+        console.log(avengers.join(", "));
+        
+        console.log(avengers.slice(2,4));
+
+        avengers = ['Captain America', 'Iron Man', 'Thor', 'Hulk', 'Hawkeye', 'Black Widow'];
+        console.log(avengers.splice(3, 1, 'Scarlet Witch'));
+        console.log(avengers.splice(2,1));
+
+        avengers = ['Captain America', 'Iron Man', 'Scarlet Witch', 'Quicksilver', 'Hawkeye', 'Black Widow'];
+        console.log(avengers.reverse());
+
+        console.log(avengers.sort());
+        console.log([5, 9, 10].sort());
+
+        console.log(avengers.indexOf('Iron Man'));
+        console.log(avengers.indexOf('Thor'));
+
+        console.log(avengers.includes('Iron Man'));
+        console.log(avengers.includes('Thor'));
+        console.log(avengers.includes('Black Widow', 1));
+
+        const coordinates = [[1,3],[4,2]];
+        console.log(coordinates);
+        console.log(coordinates[0][0]); // The first value of the first array
+        console.log(coordinates[1][0]); // The first value of the second array
+        console.log(coordinates[0][1]); // The second value of the first array
+        console.log(coordinates[1][1]); // The second value of the second array
+
+        const summer = ['Jun', 'Jul', 'Aug'];
+        const winter = ['Dec', 'Jan', 'Feb'];
+        const nested = [ summer, winter ];
+        console.log(nested);
+        const flat = [...summer, ...winter];
+        console.log(flat);
+
+    </script>
+</body>
+</html>
