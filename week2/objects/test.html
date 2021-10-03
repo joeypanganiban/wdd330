@@ -161,6 +161,97 @@
         const flat = [...summer, ...winter];
         console.log(flat);
 
+        // Sets
+        const list = new Set();
+        console.log(list.add(1));
+        console.log(list.add(2).add(3).add(4));
+        const numbers = new Set([1,2,3]);
+        console.log(numbers);
+        const moreNumbers = new Set([7,7,7,7,7,8,8,8,9,9]); // If any values are repeated in the array, then they will only appear once in the set
+        console.log(moreNumbers);
+        const letters = new Set('hello');
+        console.log(letters);
+        const words = new Set().add('the').add('quick').add('brown').add('fox');
+        console.log(words);
+        const arrays = new Set().add([1]).add([1]);
+        console.log(arrays);
+        const mixedTypes = new Set().add(2).add('2');
+        console.log(mixedTypes);
+
+        const jla = new Set().add('Superman').add('Batman').add('Wonder Woman');
+        console.log(jla);
+        console.log(jla.size);
+
+        console.log(jla.has('Superman'));
+        console.log(jla.has('Green Lantern'));
+
+        console.log(jla.delete('Superman'));
+        console.log(jla.delete('Flash'));
+
+        console.log(jla.clear());
+        console.log(jla);
+        console.log(jla.size);
+
+        // converting Set to Array
+        const shoppingSet = new Set().add('Apples').add('Bananas').add('Beans');
+        console.log(shoppingSet);
+        const shoppingArray = [...shoppingSet]; // convert it into array
+        console.log(shoppingArray);
+        const shopeeSet = new Set().add('Apples').add('Bananas').add('Beans');
+        const shopeeArray = Array.from(shoppingSet);
+        console.log(shopeeArray);
+        // Weak Sets
+        let array = [1,2,3];
+        const strong = new Set().add(array);
+        array = null;
+        console.log(strong);
+        array = [...strong][0];
+        console.log(array);
+        const weak = new WeakSet();
+        console.log(weak.add(array));
+        console.log(weak.has(array));
+        console.log(weak.delete(array));
+        console.log(weak.has(array));
+
+        // Maps
+        const romanNumerals = new Map();
+        console.log(romanNumerals);
+        console.log(romanNumerals.set(1,'I'));
+        romanNumerals.set(2,'II').set(3,'III').set(4,'IV').set(5,'V');
+        console.log(romanNumerals);
+        console.log(romanNumerals.get(4));
+        console.log(romanNumerals.has(5));
+        console.log(romanNumerals.has(10));
+        const heroes2 = new Map([ ['Clark Kent','Superman'], ['Bruce Wayne', 'Batman'] ]);
+        console.log(heroes2.size);
+        console.log(heroes2.delete('Clark Kent'));
+        console.log(heroes2.size);
+        console.log(heroes2.delete('Clark Kent'));
+        console.log(heroes2.size);
+        console.log(heroes2.clear());
+        console.log(heroes2.size);
+        // Converting Map to Array
+        console.log([...romanNumerals]); 
+        console.log(Array.from(romanNumerals));
+        
+        // Logic
+        const ageA = 23;
+        console.log(ageA);
+        if (ageA < 18) {
+        console.log('Sorry, you are not old enough to play this game');}
+        console.log();
+        console.log();
+        console.log();
+        console.log();
+        console.log();
+        console.log();
+        console.log();
+        console.log();
+        console.log();
+        console.log();
+        console.log();
+
+
     </script>
 </body>
 </html>
