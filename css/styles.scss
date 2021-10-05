@@ -28,7 +28,7 @@ body {
         }
     }
     nav, main {
-        background-color: antiquewhite;
+        background-color: #fff;
         margin: auto;
         margin-bottom: 10em;
         max-width: 780px;
@@ -39,9 +39,7 @@ body {
             background-color: rgb(212, 236, 103);
             padding: 1rem;
         }
-        h4 {
-            background-color: rgb(233, 248, 167);
-            padding: .5rem;
+        h5 {
             padding-left: 1rem;
         }
         ul, div {
@@ -53,9 +51,8 @@ body {
             margin-bottom: 3rem;
             li { 
                 padding-bottom: .5rem; 
-                list-style: none;
-                :hover {
-                    color: rgb(150, 7, 7);
+                a:hover {
+                    background-color: rgb(240, 236, 11);
                     text-decoration: underline;
                     font-style: bold;
                 }

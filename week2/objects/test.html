@@ -235,13 +235,129 @@
         console.log(Array.from(romanNumerals));
         
         // Logic
+        //if 
         const ageA = 23;
-        console.log(ageA);
-        if (ageA < 18) {
-        console.log('Sorry, you are not old enough to play this game');}
-        console.log();
-        console.log();
-        console.log();
+        if (ageA < 12) {
+        console.log('Sorry, you are not old enough to play this game');
+        } 
+        //else
+        else {
+        console.log('good')
+        }
+        // if..else
+        const n = 12;
+        if (n%2 === 0) {
+        console.log('n is an even number');
+        } else {
+        console.log('n is an odd number');
+        }
+        // Ternary Operator
+        const en = 5;
+        en%2 === 0 ? console.log('n is an even number') : console.log('n is an odd number');
+        console.log(`n is a ${(n%2 === 0)? 'even' : 'odd'} number`); // shorter form
+        // if... else statement
+        let number = 6;
+        if (number === 4) {
+        console.log('You rolled a four');
+        } else if (number === 5) {
+        console.log('You rolled a five');
+        } else if(number === 6){
+        console.log('You rolled a six');
+        } else {
+        console.log('You rolled a number less than four');
+        }
+        // switch statement
+        switch (number) {
+            case 4:
+            console.log('You rolled a four');
+            break;
+            case 5:
+            console.log('You rolled a five');
+            break;
+            case 6:
+            console.log('You rolled a six');
+            break;
+            default:
+            console.log('You rolled a number less than four');
+            break;
+        }
+
+        // Loops
+        // While Loops
+        let bottles = 3;
+        while (bottles > 0){
+            console.log(`There were ${bottles} green bottles, hanging on a wall. And if one green bottle should accidentally fall, there'd be ${bottles-1} green bottles hanging on the wall`);
+            bottles--;
+        }
+        // Infinite Loop
+        // let n2 = 1;
+        // while(n>0){
+        //     console.log('Hello');
+        //     n2++;
+        // }
+        
+        // Do.. While Loops
+        let bote = 3;
+        do {
+            console.log(`There were ${bote} green bottles, hanging on a wall. And if one green bottle should accidentally fall, there'd be ${bote-1} green bottles hanging on the wall`);
+            bote--;
+        } while (bote > 0);
+
+        // For Loop
+        for (let bottles = 10 ; bottles > 0 ; bottles--) {
+            console.log(`There were ${bottles} green bottles, hanging on a wall. And if one green bottle should accidentally fall, there'd be ${bottles-1} green bottles hanging on the wall`);
+        }
+           // - it can be weritten as..
+        let bottle = 10; // bottles is initialized here instead
+        for ( ; bottle > 0 ; ) { // empty initialization and increment
+            console.log(`There were ${bottle} green bottles, hanging on a wall. And if one green bottle should accidentally fall, there'd be ${bottle-1} green bottles hanging on the wall`);
+            bottle--; // increment moved into code block
+        }
+
+        // Nested for Loops
+        let j = 1;
+        for(let i=1 ; j<=12 ; i++){
+        for(let i=1 ; j<=12 ; j++){
+            console.log(`${j} multiplied by ${i} is ${i*j}`);
+            }
+        }
+        
+        // Looping over Arrays
+        for(let i=0, max=avengers.length; i < max; i++){
+        console.log(avengers[i]);
+        }
+        for(const value of avengers){
+        console.log(value);
+        }
+
+        // Looping OVer Sets
+        for(const letter of letters) {
+            console.log(letter);
+        }
+
+        // Looping Over Maps
+        const romanNumerals2 = new Map();
+        romanNumerals2.set(1,'I').set(2,'II').set(3,'III').set(4,'IV').set(5,'V');
+
+        console.log(romanNumerals2);
+        // << Map { 1 => 'I', 2 => 'II', 3 => 'III', 4 => 'IV', 5 => 'V' }
+        for(const key of romanNumerals2.keys()) {
+            console.log(key);
+        }
+        
+
+        // Functions
+        function hello(){
+            console.log('Hello World!');
+        }
+        const goodbye = function bye(){
+            console.log('Goodbye World!');
+        };
+        const hi = new Function('console.log("Hi World!");');
+        console.log(hello());
+        console.log(goodbye());
+        seeya = goodbye;
+        console.log(seeya());
         console.log();
         console.log();
         console.log();

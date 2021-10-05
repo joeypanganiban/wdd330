@@ -23,7 +23,7 @@ body header h1 a {
   color: #FFF;
 }
 body nav, body main {
-  background-color: antiquewhite;
+  background-color: #fff;
   margin: auto;
   margin-bottom: 10em;
   max-width: 780px;
@@ -35,9 +35,7 @@ body nav h3, body main h3 {
   background-color: #d4ec67;
   padding: 1rem;
 }
-body nav h4, body main h4 {
-  background-color: #e9f8a7;
-  padding: 0.5rem;
+body nav h5, body main h5 {
   padding-left: 1rem;
 }
 body nav ul, body nav div, body main ul, body main div {
@@ -50,10 +48,9 @@ body nav ol, body main ol {
 }
 body nav ol li, body main ol li {
   padding-bottom: 0.5rem;
-  list-style: none;
 }
-body nav ol li :hover, body main ol li :hover {
-  color: #960707;
+body nav ol li a:hover, body main ol li a:hover {
+  background-color: #f0ec0b;
   text-decoration: underline;
   font-style: bold;
 }
