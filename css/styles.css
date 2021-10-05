@@ -40,6 +40,10 @@ body nav h5, body main h5 {
 }
 body nav ul, body nav div, body main ul, body main div {
   font-size: 95%;
+  padding-top: 1rem;
+}
+body nav ul li, body nav div li, body main ul li, body main div li {
+  padding-bottom: 1rem;
 }
 body nav ol, body main ol {
   margin: 0;

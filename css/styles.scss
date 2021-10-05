@@ -44,6 +44,10 @@ body {
         }
         ul, div {
             font-size: 95%;
+            padding-top: 1rem;
+            li {
+                padding-bottom: 1rem;
+            }
         }
         ol {
             margin: 0;

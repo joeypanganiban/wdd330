@@ -18,16 +18,38 @@
         <h3>Functions</h3>
         <ul>
           <li>Functions are first-class objects that behave the same way as other values.</li>
-          <li><strong>Defining a Function</strong>
+          <li>To define a function literal we can use a <strong>function</strong> declaration.</li>
+          <li>A function can also be declared using the constructor <strong>Function()</strong>. The body of the function is entered as a string</li>
+          <li>All functions return a value, which can be specified using the return statement, which comes after the <strong>return</strong> keyword.</li>
+          <li>Every function has a special variable called arguments. We can create a simple function called <strong>arguments()</strong> that will return the <strong>argument</strong> sobject so we can see what it contains</li>
+          <li><strong>Arrow Function</strong> Arrow functions can be identified by the 'arrow' symbol, <strong>=></strong> that gives them their name.
             <div>
-              To define a function literal we can use a <strong>function </strong> declaration
+              Advantage of using Arrow Functions
+              <ul>
+                <li>They are much less verbrose than normal function declarations.</li>
+                <li>Single parameters don't need putting into parentheses.</li>
+                <li>The Body of the function doesn't need placing inside a block if it's only one line.</li>
+                <li>The <strong>return</strong> keyword isn't required if the return statement is the only statement in the body of the function. </li>
+                <li>They didn't bind their own value of <strong>this</strong> to the function (we'll see why this is a particulary useful property when we cover objects later in the book).</li>
+              </ul>
             </div>
           </li>
-          <li><strong>Invoking a Function</strong></li>
-          <li><strong>Return Values</strong></li>
-          <li><strong>Parameters and Arguments</strong></li>
-          <li><strong>Call Backs</strong></li>
-          <li><strong>Array Iterators</strong></li>
+          <li><strong>Call Backs</strong> A functions can also be given as a parameter to another function. A function that is passed as an argument to another is known as a callback.
+          
+          <div>
+
+          </div></li>
+          <li><strong>Array Iterators</strong> Arrays have a number of methods that utilize callbacks to make them more flexible.
+            <div>Methods
+              <ul>
+                <li>forEach()</li>
+                <li>map()</li>
+                <li>reduce()</li>
+                <li>filter()</li>
+                <li>mean()</li>
+              </ul>
+            </div>
+          </li>
         </ul>
 
       </div>
