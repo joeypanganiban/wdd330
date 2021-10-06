@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Activity | W02</title>
+</head>
+<body>
+    <main>
+        <div class="req1">    
+            <h3>Enter document</h3>
+            <input id='input1'   type="text" value="">
+            <button onclick="button1()">Enter</button>
+            <div id="req1"></div>
+        </div>
+        <div class="req2">
+            <h3>Modify HTML file</h3>
+            <input type="number" id="input2">
+            <button onclick="sumAll()">Sum All</button>
+            <div id="req2"></div>
+        </div>
+        <div class="req3">
+            <h3>Adding Machine</h3>
+            <input id="req3Input1" type="number">
+            <input id="req3Input2" type="number">
+            <button onclick="add">+</button>
+            <div id="req3"></div>
+        </div>
+    </main>
+    <script>
+        // Requirement 1
+       function button1() {
+            let input = document.getElementById('input1').value;
+            document.getElementById('req1').innerHTML = 'You entered '+ input;
+        }
+        // Requirement 2 
+        function sumAll() {
+            const input = parseInt(document.getElementById('input2').value);
+            const output = document.getElementById('req2').innerHTML;
+            document.getElementById('req2').innerHTML = solution(input);
+        }
+        function solution(num) {
+            let total = 0;
+            for(let i=1; i<=num; i++) {
+                total += i;
+            }
+            return total;
+        }
+        // Requirement 3
+        function add() {
+            const input1 = document.getElementById("req3Input1").value;
+            const input2 = document.getElementById("req3Input2").value;
+            document.getElementById('req3').innerHTML = solution(input);
+        }
+        function solution(num) {
+
+        }
+        
+    </script>
+</body>
+</html>
