@@ -8,6 +8,7 @@
 </head>
 <body>
     <main>
+        <h2>Core Requirements</h2>
         <div class="req1">    
             <h3>Enter document</h3>
             <input id='input1'   type="text" value="">
@@ -24,8 +25,19 @@
             <h3>Adding Machine</h3>
             <input id="req3Input1" type="number">
             <input id="req3Input2" type="number">
-            <button onclick="add">+</button>
+            <button onclick="sum()">+</button>
             <div id="req3"></div>
+        </div>
+        <h2>Stretch Goals</h2>
+        <div>
+            <h3>Function Declaration</h3>
+            <input id="goal1Input1" type="number">
+            <input id="goal1Input2" type="number">
+            <button onclick="add()">+</button>
+            <button onclick="subtract()">-</button>
+            <button onclick="multiply()">x</button>
+            <button onclick="divide()">/</button>
+            <div id="goal1"></div>
         </div>
     </main>
     <script>
@@ -48,14 +60,38 @@
             return total;
         }
         // Requirement 3
-        function add() {
+        function sum() {
             const input1 = document.getElementById("req3Input1").value;
             const input2 = document.getElementById("req3Input2").value;
-            document.getElementById('req3').innerHTML = solution(input);
+            let total = parseFloat(input1) + parseFloat(input2);
+            document.getElementById('req3').innerHTML = "Total: "+total;
         }
-        function solution(num) {
-
+        // stretch Goal 1
+        function add() {
+            const input1 = document.getElementById("goal1Input1").value;
+            const input2 = document.getElementById("goal1Input2").value;
+            let total = parseFloat(input1) + parseFloat(input2);
+            document.getElementById('goal1').innerHTML = "Total: "+total;
         }
+        function subtract() {
+            const input1 = document.getElementById("goal1Input1").value;
+            const input2 = document.getElementById("goal1Input2").value;
+            let total = parseFloat(input1) - parseFloat(input2);
+            document.getElementById('goal1').innerHTML = "Total: "+total;
+        }
+        function multiply() {
+            const input1 = document.getElementById("goal1Input1").value;
+            const input2 = document.getElementById("goal1Input2").value;
+            let total = parseFloat(input1) * parseFloat(input2);
+            document.getElementById('goal1').innerHTML = "Total: "+total;
+        }
+        function divide() {
+            const input1 = document.getElementById("goal1Input1").value;
+            const input2 = document.getElementById("goal1Input2").value;
+            let total = parseFloat(input1) / parseFloat(input2);
+            document.getElementById('goal1').innerHTML = "Total: "+total;
+        }
+        
         
     </script>
 </body>
