@@ -28,4 +28,4 @@ for (let i=0; i<links.length; i++){
   list.appendChild(li); // put the li inside the #list
 };
 
-  
+  console.log("hello world!")
