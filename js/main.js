@@ -1,8 +1,8 @@
 const links = [
   { label: "Week1", url: "week1/index.html", notes: "Local Storage, Portfolio, UX Mobile Design" },
   { label: "Week2", url: "week2/index.html", notes: "Programming Basics, Array, Logic, Loops, Functions" },
-  { label: "Week3", url: "week3/index.html", notes: " " },
-  { label: "Week4", url: "week4/index.html", notes: " " },
+  { label: "Week3", url: "week3/index.html", notes: "Objects, Document Oject Model, Events" },
+  { label: "Week4", url: "week4/index.html", notes: "Forms, Object Oriented Programming, Modern JavaScript" },
   { label: "Week5", url: "week5/index.html", notes: " " },
   { label: "Week6", url: "week6/index.html", notes: " " },
   { label: "Week7", url: "week7/index.html", notes: " " },

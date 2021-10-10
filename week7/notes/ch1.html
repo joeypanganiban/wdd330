@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WDD 330 portfolio</title>
+    <link rel="stylesheet" href="../../css/styles.css" />
+  </head>
+
+  <body>    
+    <header>
+      <h1><a href="../index.html">WDD 330 Portfolio</a></h1>
+    </header>
+    <main>
+      <h2>Week02</h2>
+        <h3>Programming Basics</h3>
+          <div>
+            <ul>
+              <li>The importance of well-commented code</li>
+              <li>JavaScript grammar - expressions, statement, semicolons, and whitespace</li>
+              <li>Primitive data types</li>
+              <li>Strings - string literals, string properties and methods</li>
+              <li>Declaring and assigning constants and variables</li>
+              <li>Numbers - decimals, hexadecimal, octal, binary and exponent form, infinity, and Nan</li>
+              <li>Arithmetic operations such as +,-, *, /, and %</li>
+              <li>Undefined and null</li>
+              <li>Booleans - truthy and falsy values</li>
+              <li>Logical operators - AND, OR, and NOT</li>
+            </ul>
+          </div>
+          <div>
+        <h4>Primitive Data Types</h4>
+        <div>
+          <ul>
+            <li>String</li>
+            <li>Symbol</li>
+            <li>Number</li>
+            <li>Boolean</li>
+            <li>Undefined</li>
+            <li>Null</li>
+          </ul>
+          <div>JavaScript has a special operator called <strong>typeof</strong> for finding out the type of a value.</div>
+          <div>Here are some examples of the different value types:</div>
+          <div>
+            <ul>
+              <li>typeof 'hello' << 'string' </li>
+              <li>typeof 10
+                << 'number'
+                </li>
+              <li>typeof true
+                << 'boolean'</li>
+              <li>typeof { ninja: 'turtle' }
+                << 'object'
+                </li>
+              <li>typeof [ 1, 2, 3 ]
+                << 'object' (All non-primitive data types return a type of 'object'.)</li>
+            </ul>
+          </div>
+        </div>
+        <h4>Variables</h4>
+          <div>
+            <ul>
+              <li>JavaScript uses the key word <strong>const</strong> and <strong>let</strong> to declare variables.</li>
+              <li><strong>conts</strong> is used when the variable will not be reassigned to another value</li>
+              <li><strong>let</strong> is used if the variable might be reassigned later in the program.</li>
+              <li>To assign value to a constant or variable, we use the <strong>=</strong> operator.</li>
+            </ul>
+            <div>
+              <strong><i>Example:</i></strong>
+              <ul>
+                <li>let x = 3, y = 4, z = 5;</li>
+                <li>const name = 'Alexa';<br>
+                  name = 'Siri';<br>
+                  << TypeError: Assignment to constant variable.</li>
+                  <li>const name = { value: 'Alexa' }; // an object<br>
+                    name.value = 'Siri'; // change the value <br>
+                    << 'Siri'
+                                        </li>
+              </ul>
+            </div>
+          </div>
+        <h4>Scope</h4>
+          <div>
+            <ul>
+              <li>Using const and let to declare variables means they are block scoped, so their
+                value only exists inside the block they are declared in.</li>
+              <li><strong>Global Scope</strong> Any variable declared outside of a block</li>
+              <li><strong>Local Scope</strong>  Any variables
+                defined inside a block using the let or const will only be available inside that
+                block and not be accessible outside of that block</li>
+            </ul>
+          </div>
+        <h4>Naming Constants & Variables</h4>
+          <div>Constant and variable names can start with any upper or lower-case letter, an underscore, _ , or dollar character, $ . They can also contain numbers, but cannot start with them.
+            <ul>
+              <li>$name ---> The $ character is also used by the popular jQuery library, so using this in your variable names may also cause problems.</li>
+              <li>_answer</li>
+              <li>firstName ---> Camel casestarts with a lowercase letter and then each new word is capitalized</li>
+              <li>last_name ---> Underscoreseparates each new word with an underscore</li>
+              <li>address_line1</li>
+            </ul>
+          </div>
+        <h4>Strings</h4>
+          <div>
+            A string is a collection of characters, such as letters and symbols
+          </div>
+        <h4>String Properties and Methods</h4>
+          <div></div>
+        <h4>Converting/Parsing</h4>
+          <div>
+            <ul><li>The best way to change a string to a number is to use the Number method. This
+              will convert the string form of a number into an actual number</li></ul>
+          </div>
+          <div><strong><i>Example:</i></strong>
+            <ul>
+              <li><strong><i>String to Number</i></strong><br><br>
+                const answer = '5' * 1;<br>
+                << 5 <br>
+                typeof answer; <br>
+                << "number"
+              </li><br>
+              <li>
+                <strong><i>Number to String</i></strong><br><br>
+                String(3);<br>  
+                << '3'
+                    <br><br>
+                3 + ' ';<br>
+                << '3'
+                    <br><br>
+                  10..toString(2);<br>
+                  << '1010'</li><br>
+              <li><strong><i>Parsing Numbers</i></strong> <br><br>-> <strong>parseInt()</strong>   can be used to convert a
+                string representation of a numerical value back into a number
+               <br><br>
+                parseInt('1010',2); // converts from binary, back to decimal <br>
+                << 10 <br><br>
+                parseInt('omg',36);<br>
+                << 31912 <br><br>
+                parseInt('23',10);<br>
+                << 23 <br><br>
+                ->  <strong>parseFloat()</strong>    converts strings into floating point decimal numbers   <br><br>
+                parseFloat('2.9',10); <br>
+                << 2.9
+                </li>
+            </ul>
+          </div>
+        <h4>Template Literals</h4>
+          <div>
+            <ul>
+              <li> a special types of string that were introduced in ES6</li>
+              <li> use the backtick character, ` , to deliminate the string,</li>
+              <li> can be thought of as super-powered strings as they behave in the
+                same way as normal string literals, but with the extra power of string interpolation.
+                For this reason, it is not uncommon to see backticks used to create all strings in ES6
+                code.</li>
+            </ul>
+          </div>
+          <div><strong><i>Example:</i></strong></div>
+          <div>
+            <ul>
+              <li>`She said, "It's Me!"`</li><br><br>
+              <li>const name = `Siri`;<br>
+                `Hello ${ name }!`;<br>
+                << 'Hello Siri!'<br><br>
+                const age = 39;<br>
+                `I will be ${ age + 1 } next year`;<br>
+                << 'I will be 40 next year'
+                </li><br><br>
+            </ul>
+          </div>
+        <h4>Arithmetic Operations</h4>
+          <div>
+            <ul>
+              <li>Addition: 5 + 4.3; </li>
+              <li>Subtraction: 6 - 11;</li>
+              <li>Multiplication: 6 * 7;</li>
+              <li>Division: 3/7;</li>
+              <li>Exponentiation: 2**3; ---> 8</li>
+              <li>Modular: -4%3; ---> -1  // -4 modulo 3 would be 2</li>
+            </ul>
+          </div>
+        <h4>Changing The Value of Variables</h4>
+          <div>
+            If a variable has been assigned a numerical value, it can be increased using the following operation:
+              <br><br>
+              <div>let points = 0; // initialize points score to zero << 0 <br>
+                points = points + 10;<br>
+                << 10
+              </div>
+              <div>
+                <div>compound assignment operator</div>
+                points += 10; << 20
+              </div>
+              <div>points -= 5; // decreases points by 5 << 15 </div>
+              <div>points *= 2; // doubles points        << 30 </div>
+              <div>points /= 3; // divides value of points by 3    << 10 </div>
+              <div>points %= 7; // changes the value of points to the remainder if its current value is divided by 7 << 3</div>
+          </div>
+        <h4>Incrementing Values</h4>
+          <div>
+            If you only want to increment a value by 1 , you can use the ++ operator. 
+          </div>
+        <h4>Logical Operators</h4>
+          <div>!(Logical NOT)``</div>
+
+
+    </main>
+    <footer>
+
+    </footer>
+    <script src="superObjects.js"></script>
+    <script src="myMaths.js"></script>
+  </body>
+</html>
