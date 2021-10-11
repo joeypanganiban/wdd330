@@ -12,95 +12,63 @@
       <h1><a href="../index.html">WDD 330 Portfolio</a></h1>
     </header>
     <main>
-        <h2>Week02</h2> 
+        <h2>Week03</h2> 
+        <h3>Document Object Model</h3>
         <section>
-        <h3>Arrays, Logic, and Loops</h3>
-        <div>
-            <h4>Arrays</h4>
-            <ul>
-            <li>is an ordered list of values.
-            </li>
-            <li>const avengers = ['Captain America', 'Iron Man', 'Thor', 'Hulk'];
-                <br><< ['Captain America', 'Iron Man', 'Thor', 'Hulk']</li>
-            </ul>
-            <h5>Array Methods</h5>
-            <ul>
-            <li>key.length - Thelengthproperty can be used as part of the index to find the last item in an array </li>
-            <li>key.pop() - To remove the last item from an array, we can use the pop() method </li>
-            <li>key.push() - The push() method appends a new value to the end of the array</li>
-            <li>key.shift() - The shift() method works in a similar way to the pop() method, but this removes thefirstitem in the array</li>
-            <li>key.unshift() -  The unshift() method is similar to the push() method, but this appends a new item to thebeginningof the array</li>
-            <li>key.concat([]) - The concat() method can be used to merge an array with one or more arrays</li>
-            <li>key.join() - The join() method can be used to turn the array into a string that comprises all the items in the array, separated by commas. You can choose a separator other than a comma by placing it inside the parentheses. Let’s try using an ampersand</li>
-            <li>key.slice() - The slice() method creates a subarray; effectively chopping out a slice of an original array, starting at one position and finishing at another.</li>
-            <li>key.splice() - The splice() method removes items from an array then inserts new items in their place</li>
-            <li>key.reverse() - We can reverse the order of an array using the reverse() method:</li>
-            <li>key.sort() - We can sort the order of an array using the sort() method</li>
-            <li>key.indexOf() - We can find out if an array contains a particular value using the indexOf() method to find the first occurrence of a value in an array.</li>
-            <li>key.includes() - This returns a boolean value depending on whether the array contains a particular element or not</li>
-            </ul>
-        </div>
-        <div>
-            <h4>Sets</h4>
-            <ul>      
-            <li>An empty set is created using the <strong>new</strong> operator and <strong>Set()</strong> constructor:</li>        
-            <li>A set is a data structure that represents a collection of unique values, so it cannot include any duplicate values</li>
-            <li>They are similar in concept to amathematical set, although (for the time being at least) they don't contain mathematical set operations such as union, intersection and product.</li>
-            <li>Set().add() - Values can be placed into a set using the add() method</li>
-            </ul>
-            <h5>Sets Methods</h5>
-            <ul>
-            <li>key.size() or key.size - The number of values in a set can be found using thesize()method</li>
-            <li>key.has() - The has() method can be used to check if a value is in a set. This returns a boolean value of true or false </li>
-            <li>key.delete() - The delete() method can be used to remove a value from a set. This returns a boolean value oftrueif the value was removed from the set, orfalseif the value wasn't in the set and couldn't be removed</li>
-            <li>key.clear() - The clear() method can be used to removeallvalues from a set</li>
-            </ul>
-            <h5>Converting Sets to Arrays</h5>
-            <ul>
-            <li>A set can be converted into an array by placing the set, along with thespread operatordirectly inside an array literal.</li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            </ul>
-        </div>
-        <div>
-            <h4>Maps</h4>
-            <ul>
-            <li>Mapswere another data structure introduced in the ES6 specification. They are a convenient way of keeping a list of key and value pairs, and are similar to 'hashes', or 'hash tables' or 'dictionaries' in other programming languages.</li>
-            </ul>
-            <h5>Map Methods</h5>
-            <ul>
-            <li>key.get() - A map is a bit like a dictionary where you can look up a value based on the key. To look up a value, we can use theget()method</li>
-            <li>key.has() - Thehas()method can be used to check if a particular key is in a map. This returns a boolean value of true or false</li>
-            <li>key.delete() - Thedelete()method can be used to remove a key and value pair from a map. This returns a boolean value oftrueif the value was removed orfalseif it wasn't in the map. To delete a specific value, you need to specify the key in parentheses</li>
-            </ul>
-            <ul><li><strong>Week Maps</strong> work in the same way as weak sets. They are the same as maps, except their keys cannot be primitives, and the garbage collector will automatically remove any dead entries when the reference to the original object is deleted.</li></ul>
-        </div>
-            <h4>Logic</h4>
-            <div> logical conditions that allow you to control the flow of a program by running different blocks of code, depending on the results of certain operations.</div>
-            <ul>
-            <li>if Statement</li>
-            <li>else statement - Theelsekeyword can be used to add an alternative block of code to run if the condition is false. Anif ... elsestatement looks like this</li>
-            <li>Ternaru Operator - A shorthand way of writing anif ... elsestatement is to use the ternary operator,?, which takes three operands in the following format: <strong><i>condition</i> ?</strong></li>
-            <li>Switch Statement - heswitchoperator can be used to make your code easier to follow when there are lots of conditions to test. The if...else can be rewritten using a switch statement.</li>
-            </ul>
-        </div>
-        <div>
-            <h4>Loops</h4>
-            <div>Loops will repeat a piece of code over and over again according to certain conditions.</div>
-            <ul>
-            <li>While Loops - This will repeatedly run a block of code while a certain condition is true, and takes the following structure.</li>
-            <li>Infinite Loops - example n++</li>
-            <li>do...while Loops - Ado ... whileloop is similar to awhileloop. The only difference is that the condition comesafterthe block of code</li>
-            <li>for Loops- Forloops are probably the most commonly type of loop used in JavaScript, and take the following form <br> example: for (initialization ; condition ; after) { do something }</li>
-            <li>Nested for Loops - You can place a loop inside another loop to create a nested loop. It will have an inner loop that will run all the way through before the next step of the outer loop occurs.</li>
-            <li>Looping over Arrays</li>
-            <li>Looping over Sets </li>
-            <li>Looping over Maps</li>
-            </ul>
-        </div>
-        <div>
+            <div>
+                <h4>Document Object Model (DOM)</h4>
+                <ul>
+                    <li>The Document Object Model is a way of representing a page of HTML as a tree of nodes.</li>
+                    <li><xmp><p class='warning'>Something has gone <em>very</em> wrong!</p></xmp></li>
+                    <li><img src="../images/domtree.jpg" alt="DOM tree"></li>
+                    <li>The DOM is not actually part of JavaScript because it is <strong>language agnostic</strong> (although JavaScript is, by far, the language most commonly used with it</li>
+                    <li> We can use JavaScript to access and modify different parts of a web page using a special built-in object called <strong>document</strong> </li>
+                </ul>
+            </div>
+            <div>
+                <h4>History of DOM</h4>
+                <ul>
+                    <li>The DOM level 2 specification was published in 2000 and introduced the popular <strong>getElementById()</strong> method, which made it much easier to access specific elements on a web page. </li>
+                    <li>The DOM specification is developed as a <strong>living standard</strong>.</li>
+                </ul>
+            </div>
+            <div>
+                <h4>An Example Web Page</h4>
+                <ul>
+                    <li><img src="../images/heroesHTML.jpg" alt="heroes.html"></li>
+                    <li><img src="../images/heroesPage.jpg" alt="heroes Page"></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Getting Elements</h4>
+                <ul>
+                    <li>The DOM provides several methods that allow us to access any element on a page. </li>
+                    <li><xmp>const body = document.body;</xmp></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Setting An Element's Attributes</h4>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Updating CSS</h4>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
         </section>
 
     </main>

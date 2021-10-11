@@ -320,8 +320,47 @@ Math.hypot(3,4); // returns the square root of 3 squared + 4 squared
 Math.hypot(2,3,6); // more than 2 arguments can be used
 // << 7
 
+const pattern = new RegExp('[a-zA-Z]+ing');
+// const language = 'JavaScript';
+// const pattern = new RegExp(language);
+console.log(pattern.test('joke'));
+// << false
 
+console.log(pattern.test('joking'));
+// << true
 
+console.log(pattern.test('jokingly'));
+// << false
+const pattern1 = /[Jj][aeiou]v[aeiou]/;
+console.log(pattern1);
+// << /[Jj][aeiou]v[aeiou]/
+
+pattern1.test('JavaScript');
+console.log(pattern1.test('JavaScript'));
+// << true
+
+pattern1.test('jive');
+console.log(pattern1.test('jive'));
+// << true
+
+pattern1.test('hello');
+console.log(pattern1.test('hello'));
+// << false
+
+const word = 'abracadabra';
+const greedyPattern = /a.+a/;
+greedyPattern.exec(word);
+// << [ 'abracadabra', index: 0, input: 'abracadabra' ]
+const lazyPattern = /a.+?a/;
+lazyPattern.exec(word);
+// << [ 'abra', index: 0, input: 'abracadabra' ]
+
+const pdf = /.*\.pdf$/;
+pdf.test('chapter5.pdf');
+// << true
+
+pdf.test('report.doc');
+// << false
 
 
 
