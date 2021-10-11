@@ -8,6 +8,7 @@
 </head>
 <body>
     <div>CONSOLE IS THE KEY!</div>
+    <div id="output"></div>
     <script>
         
 const superman = {
@@ -31,9 +32,295 @@ const realName = 'Tony Stark';
 // const ironMan = { name: name, realName: realName };
 
 // short ES6 way
+
+// Accessing Properties
 const ironMan = { name, realName };
 console.log(superman.name);
-superman["real" + " " + "name"]
+console.log(superman["real" + " " + "name"]);
+
+// Computed Properties
+const hulk = { name: 'Hulk', ['catch' + 'Phrase']: 'Hulk Smash!' };
+console.log(hulk);
+const bewitched = true;
+const captainBritain = { name: 'Captain Britain', hero: bewitched ? false : true };
+console.log(captainBritain);
+const name1 = Symbol('name');
+
+const supergirl = { [name1]: 'Supergirl' };
+console.log(supergirl[name1]);
+
+const realName1 = Symbol('real name');
+console.log(supergirl[realName1] = 'Kara Danvers');
+const daredevil = { [name]: 'Daredevil', [realName]: 'Matt Murdoch' };
+
+// calling Method
+console.log(superman.fly());
+console.log(superman['fly']());
+
+// Checking if Properties or Methods Exist
+console.log('city' in superman); // false
+console.log(superman.city !== undefined); // false
+console.log(superman.hasOwnProperty('city')); // false
+console.log(superman.hasOwnProperty('name')); // true
+// Finding all the Properties of an Object
+for(const key in superman) {
+    console.log(key + ": " + superman[key]);
+}
+// << "name: Superman"
+// << "real name: Clark Kent"
+// << "height: 75"
+// << "weight: 235"
+// << "hero: true"
+// << "villain: false"
+// << "allies: Batman,Supergirl,Superboy"
+// << "fly: function (){
+//     console.log(\"Up, up and away!\");
+// }"
+for(const key in superman) {
+    if(superman.hasOwnProperty(key)){
+        console.log(key + ": " + superman[key]);
+    }
+}
+for(const key of Object.keys(superman)) {
+    console.log(key);
+}
+// <<  name
+//     real name
+//     height
+//     weight
+//     hero
+//     villain
+//     allies
+//     fly
+for(const value of Object.values(superman)) {
+    console.log(value);
+}
+// <<  Superman
+//     Clark Kent
+//     75
+//     235
+//     true
+//     false
+//     [ 'Batman','Supergirl','Superboy' ]
+//     [Function: fly]
+for(const [key,value] of Object.entries(superman)) {
+    console.log(`${key}: ${value}`);
+}
+// <<  name: Superman
+//     real name: Clark Kent
+//     height: 75
+//     weight: 235
+//     hero: true
+//     villain: false
+//     allies: [ 'Batman','Supergirl','Superboy' ]
+//     fly: [Function: fly]
+superman.city = 'Metropolis';
+console.log(superman.city);
+// << 'Metropolis'
+console.log(superman);
+// << { name: 'Superman',
+//     'real name': 'Clark Kent',
+//     height: 75,
+//     weight: 235,
+//     hero: true,
+//     villain: false,
+//     allies: [ 'Batman', 'Supergirl', 'Superboy' ],
+//     fly: [Function: fly] 
+//     city: 'Metropolis' }
+superman['real name'] = 'Kal-El';
+// << 'Kal-El'
+console.log(superman);
+// << {'allies': ['Batman', 'Supergirl', 'Superboy'], 'city': 'Metropolis', 'fly': function (){
+//     console.log('Up, up and away!');
+// }, "height": 75, 'hero': true, 'name": 'Superman", 'real name': 'Kal-El", 'villain': false, 'weight': 235}
+delete superman.fly
+// << true
+console.log(superman);
+const jla = {
+    superman: { realName: 'Clark Kent' },
+    batman: { realName: 'Bruce Wayne' },
+    wonderWoman: { realName: 'Diana Prince' }, 
+    flash: { realName: 'Barry Allen' },
+    aquaman: { realName: 'Arthur Curry' },
+}
+console.log(jla.wonderWoman.realName);
+// << "Diana Prince"
+
+console.log(jla['flash']['realName']);
+// << "Barry Allen"
+
+console.log(jla.aquaman['realName']);
+// << "Arthur Curry"
+
+const thor = { name: 'Thor' 
+// more properties here
+};
+
+const thor1 = { name: 'Thor' 
+// more properties here
+};
+
+const cloneThor = thor1;
+cloneThor.name = 'Clor';
+console.log(thor1.name);
+// << 'Clor'
+a = 1;
+b = a;
+b = 2;
+// check the value of a hasn't changed
+console.log(a);
+// << 1
+function greet({greeting,name,age}) {
+    return `${greeting}! My name is ${name} and I am ${age} years old.`;
+}
+console.log(greet({ greeting: `What's up dude`, age: 10, name: `Bart` }));
+// << 'What\'s up dude! My name is Bart and I am 10 years old.'
+function greet({greeting='Hello',name,age=18}) {
+    return `${greeting}! My name is ${name} and I am ${age} years old.`;
+}
+console.log(greet({ name: 'Lisa', age: 8 }));
+// << 'Hello! My name is Lisa and I am 8 years old.'
+const dice = {
+    sides: 6,
+    roll() {
+        return Math.floor(this.sides * Math.random()) + 1;
+    }
+}
+console.log(dice.roll());
+// << 5 random
+
+console.log(dice.roll());
+// << 3 random
+dice.sides = 20;
+// << 20
+
+console.log(dice.roll());
+// << 12 random
+
+console.log(dice.roll());
+// << 18 random
+
+const myMaths = {
+
+    square(x) {
+        return x * x;
+    },
+    mean(array,callback) {
+        if (callback) {
+        array.map( callback );
+        } 
+        const total = array.reduce((a, b) => a + b);
+        return total/array.length;
+    }
+};
+console.log(myMaths.square(3));
+// << 9
+
+// console.log(mean(1,2,3));
+// << 2
+const batman = '{"name": "Batman","real name": "Bruce Wayne","height": 74, "weight": 210, "hero": true, "villain": false, "allies": ["Robin","Batgirl","Superman"]}'
+
+console.log(JSON.parse(batman));
+// << { name: 'Batman',
+// 'real name': 'Bruce Wayne',
+// height: 74,
+// weight: 210,
+// hero: true,
+// villain: false,
+// allies: [ 'Robin', 'Batgirl', 'Superman' ] }
+const wonderWoman = {
+    name: 'Wonder Woman',
+    'real name': 'Diana Prince',
+    height: 72,
+    weight: 165,
+    hero: true,
+    villain: false,
+    allies: ['Wonder Girl','Donna Troy','Superman'],
+    lasso: function(){
+        console.log('You will tell the truth!');
+    }
+}
+
+console.log(JSON.stringify(wonderWoman));;
+// << '{"name":"Wonder Woman","real name":"Diana Prince","height":72,
+// "weight":165,"hero":true,"villain":false,"allies":["Wonder Girl",
+// "Donna Troy","Superman"]}'
+
+Math.abs(3);
+// << 3
+
+console.log(Math.abs(-4.6));;
+// << 4.6
+
+Math.ceil(4.2);
+// << 5
+
+Math.ceil(8);
+// << 8
+
+Math.ceil(-4.2);
+// << -4
+Math.floor(4.2);
+// << 4
+
+Math.floor(8);
+// << 8
+
+Math.floor(-4.2);
+// << -5
+Math.round(4.5);
+// << 5
+
+Math.round(4.499);
+// << 4
+
+Math.round(-4.2);
+// << -4
+Math.trunc(4.9);
+// << 4
+
+Math.trunc(-4.2);
+// << -4
+
+Math.exp(1); // This is Euler's constant
+// << 2.718281828459045
+
+Math.exp(0); // Any number to the power of 0 is 1
+// << 1
+
+Math.exp(-3);
+// << 0.049787068367863944
+
+Math.pow(3, 2); // 3 squared
+// << 9
+
+Math.pow(4.5, 0); // Any number to the power of 0 is 1
+// << 1
+
+Math.pow(27, 1/3); // A nice way to do cube roots
+// << 3
+Math.sqrt(121);
+// << 11
+
+Math.sqrt(2); // same as Math.SQRT2
+// << 1.4142135623730951
+
+Math.sqrt(-1); // imaginary numbers aren't supported!
+// << NaN
+
+Math.cbrt(8);
+// << 2
+
+Math.cbrt(-1000);
+// << -10
+
+Math.hypot(3,4); // returns the square root of 3 squared + 4 squared
+// << 5
+
+Math.hypot(2,3,6); // more than 2 arguments can be used
+// << 7
+
+
 
 
 
