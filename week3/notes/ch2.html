@@ -44,28 +44,62 @@
                 <ul>
                     <li>The DOM provides several methods that allow us to access any element on a page. </li>
                     <li><xmp>const body = document.body;</xmp></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li><img src="../images/nodetype.jpg" alt="Node Type and Code"></li>
+                    <li>We can also use the <strong>nodeName</strong> property to find the name of the element. for example: <strong>body.nodeName</strong></li>
+                    <li><strong>Legacy DOM Shortcut Methods</strong></li>
+                    <li><strong>document.body</strong></li>
+                    <li><strong>document.images</strong></li>
+                    <li><strong>document.links</strong></li>
+                    <li><strong>document.anchors</strong></li>
+                    <li><strong>document.forms</strong></li>
+                    <li><strong>getElementById()</strong></li>
+                    <li><strong>getElementByTagName()</strong>  const listItems = document.getElementsByTagName('li');</li>
+                    <li><strong>getElementByClassName()</strong> const heroes = document.getElementsByClassName('hero');</li>
+                    <li><strong>document.querySelector()</strong> method allows you to use CSS notation to find the <strong>first</strong> element in the document that matches that matches a CSS selector provided as an argument</li>
+                    <li><strong>document.querySelectorAll()</strong></li>
+                    <li>The <strong>querySelector()</strong> method can be called on <strong>any</strong> element, rather than justdocument. For example, we can get a reference to the <strong>ul</strong> element</li>
+                    <li>const batman = ul.querySelector('li#bats')</li>
+                    <li><strong>jQuery</strong> is a popular JavaScript framework that makes it very easy to find elements on a page using a CSS-style syntax. It uses <strong>document.querySelectorAll()</strong> in the background whenever it can. </li>
+                    <li>The <strong>parentNode()</strong>,<strong>previousSibling()</strong>,<strong> nextSibling()</strong>, <strong>childNodes()</strong> and <strong>children()</strong> methods can be used to navigate around the DOM tree.</li>
+                    <li><strong>getAttribute()</strong> method returns the value of the attribute provided as an argument</li>
                 </ul>
             </div>
             <div>
                 <h4>Setting An Element's Attributes</h4>
                 <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li>The <strong>setAttribute</strong> can change the value of an element’s attributes. It takes two arguments: the attribute that you wish to change, and the new value of that attribute.</li>
+                    <li>wonderWoman.setAttribute('id','amazon');
+                        <br>
+                        wonderWoman.getAttribute('id');<br>
+                        << 'amazon'</li>
+                    <li>wonderWoman.id</li>
+                    <li>wonderWoman.className</li>
+                    <li>wonderWoman.classList.add()</li>
+                    <li>wonderWoman.classList.remove()</li>
+                    <li>wonderWoman.classList.toggle()</li>
+                    <li>wonderWoman.classList.contains()</li>
+                    <li>document.createElement('')</li>
+                    <li>document.createTextNode('')</li>
+                    <li>appendChild()</li>
+                    <li>flash.appendChild(flashText);</li>
+                    <li>const flash = document.createElement('li');<br>
+                        flash.textContent = 'Flash';</li>
+                    <li>function createElement (tag,text) {
+                        const el = document.createElement(tag);
+                        el.textContent = text;
+                        return el
+                    }</li>
+                    <li>const aquaman = createElement('li','Aquaman');  </li>
+                    <li>heroes.insertBefore(aquaman,wonderWoman);</li>
                 </ul>
             </div>
             <div>
                 <h4>Updating CSS</h4>
                 <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li>Every element node has a <strong>style</strong> property. This can be used to dynamically modify the presentation of any element on a web page.</li>
+                    <li>The style property can also be used to see what CSS styles have been set on an element, but unfortunately it applies only to inline styles, and styles set using JavaScript.</li>
+                    <li>There is a function called <strong>getComputedStyle()</strong> that will retrieve all the style information of an element that is given as a parameter.</li>
+                    <li><strong>getComputedStyle(superman).getPropertyCSSValue('color').cssText;</strong></li>
                     <li></li>
                 </ul>
             </div>

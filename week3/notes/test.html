@@ -362,9 +362,41 @@ pdf.test('chapter5.pdf');
 pdf.test('report.doc');
 // << false
 
+const body = document.body;
+console.log(typeof body);
+console.log(body.nodeType);
+console.log(body.nodeName);
+for (let i=0 ; i < document.images.length ; i++) {
+
+// do something with each image using document.images[i]
+const imageArray = Array.from(document.images);
+
+}
+const h1 = document.getElementById('title');
+const listItems = document.getElementsByTagName('li');
+console.log(listItems);
+console.log(listItems[0]);
+console.log(listItems[1]);
+console.log(listItems[2]); 
+const heroes = document.getElementsByClassName('hero');
+console.log(heroes.length);
+console.log(document.getElementsByClassName('villain').length);
+console.log(document.querySelector('#bats'));
+
+// const superman1 = heroes.firstchild;
+// superman1.style.border = "red 2px solid";
 
 
-
-    </script>
+</script>
+<!-- <script src="../notes/test.js"></script> -->
+    
+    <header>
+        <h1 id='title'>Justice League</h1>
+    </header>
+        <ul id='roster'>
+            <li class='hero'>Superman</li>
+            <li class='vigilante hero' id='bats'>Batman</li>
+            <li class='hero'>Wonder Woman</li>
+        </ul>
 </body>
 </html>
