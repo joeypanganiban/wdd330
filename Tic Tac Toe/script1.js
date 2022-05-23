@@ -8,12 +8,12 @@ window.addEventListener('DOMContentLoaded', () => {
     let currentPlayer = 'X';
     let isGameActive = true;
 
-    const PLAYERX_WON = "PLAYERX_WON";
+    const PLAYERX_WON = 'PLAYERX_WON';
     const PLAYERO_WON = 'PLAYERO_WON';
-    const TIE ='TIE';
+    const TIE = 'TIE';
 
     /*
-        Indexes within the board'
+        Indexes within the board
         [0] [1] [2]
         [3] [4] [5]
         [6] [7] [8]
@@ -33,7 +33,7 @@ window.addEventListener('DOMContentLoaded', () => {
     function handleResultValidation() {
         let roundWon = false;
         for (let i = 0; i <= 7; i++) {
-            const winningCondition = winningConditions[i];
+            const winCondition = winningConditions[i];
             const a = board[winCondition[0]];
             const b = board[winCondition[1]];
             const c = board[winCondition[2]];
@@ -46,14 +46,14 @@ window.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-        if (roundWon) {
+    if (roundWon) {
             announce(currentPlayer === 'X' ? PLAYERX_WON : PLAYERO_WON);
             isGameActive = false;
             return;
         }
 
-        if (!board.includes(''))
-            announce(TIE);
+    if (!board.includes(''))
+        announce(TIE);
     }
 
     const announce = (type) => {
@@ -68,7 +68,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 announcer.innerText = 'Tie';
         }
         announcer.classList.remove('hide');
-    }
+    };
 
     const isValidAction = (tile) => {
         if (tile.innerText === 'X' || tile.innerText === 'O'){
@@ -76,9 +76,9 @@ window.addEventListener('DOMContentLoaded', () => {
         }
 
         return true;
-    }
+    };
 
-    const updateBoard = (index) => {
+    const updateBoard =  (index) => {
         board[index] = currentPlayer;
     }
 
@@ -98,9 +98,9 @@ window.addEventListener('DOMContentLoaded', () => {
             changePlayer();
         }
     }
-
+    
     const resetBoard = () => {
-        board = ['', '', '', '', '', '', '', ''];
+        board = ['', '', '', '', '', '', '', '', ''];
         isGameActive = true;
         announcer.classList.add('hide');
 
@@ -118,6 +118,6 @@ window.addEventListener('DOMContentLoaded', () => {
     tiles.forEach( (tile, index) => {
         tile.addEventListener('click', () => userAction(tile, index));
     });
-        
+
     resetButton.addEventListener('click', resetBoard);
 });

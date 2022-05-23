@@ -37,7 +37,8 @@
     max-width: 300px;
 }
 
-.title {
+.tile {
+    margin: 0;
     border: 1px solid #fff;
     min-width: 100px;
     min-height: 100px;
